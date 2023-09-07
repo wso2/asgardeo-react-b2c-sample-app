@@ -1,5 +1,5 @@
 import ASGARDEO_LOGO from '../images/asgardeo-logo-transparent.png';
-import GITHUB_ICON from '../images/github.png';
+import GITHUB_LOGO from '../images/github.png';
 import USER_LOGO from '../images/user.png'
 import REACT_LOGO from '../images/react-logo.png';
 import { useAuthContext } from '@asgardeo/auth-react';
@@ -61,7 +61,7 @@ export const Home = () => {
               </div>
               <div className="container-column">
                 <a href='https://github.com/dasuni-30/asgardeo-react-sample-app'>
-                    <img alt='react-logo' src={ GITHUB_ICON } className='github-logo-image-small'/>
+                    <img alt='react-logo' src={ GITHUB_LOGO } className='github-logo-image-small'/>
                 </a>
                 <a href='https://github.com/dasuni-30/asgardeo-react-sample-app'>
                   Explore the source code
