@@ -24,7 +24,6 @@ export const Settings = () => {
   const updateTheme = async (event) => {
     event.preventDefault();
     var themeColor = document.querySelector( 'input[name="theme"]:checked');
-    console.log(themeColor);   
 
     if (themeColor.value === "blueTheme") {
       r.style.setProperty('--primary', '#1591EB');

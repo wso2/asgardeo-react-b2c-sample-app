@@ -19,7 +19,7 @@ export const Resources = () => {
           </p>
         </div>
       </header>
-      <APICall></APICall>
+      <APICall/>
     </div>
   );
 };

@@ -35,7 +35,7 @@ export const Home = () => {
               </div>
             </header>
             <h3>What can you do next?</h3>
-            <Cards></Cards>
+            <Cards/>
           </>
         ) : (
           <header className='App-header-section'>

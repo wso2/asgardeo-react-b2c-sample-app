@@ -8,20 +8,20 @@ const auth = AsgardeoSPAClient.getInstance();
 export async function getExternalApi () {
 
   const requestConfig = {
-      headers: {
-          "Accept": "application/json",
-          "Content-Type": "application/json"
-      },
-      method: "GET",
-      url: externalApiEndpoint
+    headers: {
+      "Accept": "application/json",
+      "Content-Type": "application/json"
+    },
+    method: "GET",
+    url: externalApiEndpoint
   };
 
   return auth.httpRequest(requestConfig)
   .then((response) => {
       
-      return response.data;
+    return response.data;
   })
   .catch((error) => {
-      console.log(error);
+    // Log the error.
   });
 };

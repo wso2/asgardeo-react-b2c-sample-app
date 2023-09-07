@@ -60,7 +60,6 @@ const Nav = () => {
 
     // Add active class to the current button.
     useEffect(() => {
-      console.log("hh");
       const currentUrl = window.location.href;
       const currentTabName = currentUrl.split("/")[3].replace("#", "");
 
@@ -74,8 +73,7 @@ const Nav = () => {
         currentTab = resourceTab;
         removeActiveTab(homeTab);
         removeActiveTab(settingsTab);
-      } 
-      else if (currentTabName === "settings") {
+      } else if (currentTabName === "settings") {
         currentTab = settingsTab;
         removeActiveTab(homeTab);
         removeActiveTab(resourceTab);
@@ -88,12 +86,12 @@ const Nav = () => {
         removeActiveTab(homeTab);
         removeActiveTab(resourceTab);
         removeActiveTab(settingsTab);
-      }
-      else {
+      } else {
         currentTab = homeTab;
         removeActiveTab(resourceTab);
         removeActiveTab(settingsTab);
       }
+      
       if (currentTab !== undefined && !(currentTab === null) && !(currentTab.className.includes("active")) && currentTab !== profileTab) {
         currentTab.className += " active";
       }

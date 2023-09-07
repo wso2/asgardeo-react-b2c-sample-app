@@ -114,7 +114,6 @@ const Profile = () => {
   // Update the password.
   const handlePasswordSubmit = async (event) => {
     event.preventDefault();
-    console.log(passwordFormValues)
     try {
       updatePassword(
         passwordFormValues?.currentPassword,
@@ -164,56 +163,57 @@ const Profile = () => {
           </tr>
         </header>
         <form onSubmit={handlePersonalInfoSubmit}>
-                <div className="table-container">
-                  <table className="one-column-table">
-                    <h3>Personal Info</h3>
-                    <p className='p-description justified-text'>Update your user profile information.</p>
-                    <div className="two-column-grid">
-                    <div className="column">
-                      <tr>
-                        <td>
-                          <label htmlFor='givenName'>First Name:</label>
-                        </td>
-                        </tr>
-                        <tr>
-                        <td>
-                          <input
-                            type='text'
-                            id='givenName'
-                            name='givenName'
-                            value={formValues?.givenName}
-                            onChange={handleChange}
-                          />
-                        </td>
-                        </tr>
-                        </div>
-                        <div className="column">
-                      <tr>
-                        <td>
-                          <label htmlFor='lastName'>Last Name:</label>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <input
-                            type='text'
-                            id='lastName'
-                            name='lastName'
-                            value={formValues?.lastName}
-                            onChange={handleChange}
-                          />
-                        </td>
-                      </tr>
-                      </div>
-                      </div>
-                    <button className='btn margin-top' type='submit'>Update</button>
-                  </table>
+          <div className="table-container">
+            <table className="one-column-table">
+              <h3>Personal Info</h3>
+              <p className='p-description justified-text'>Update your user profile information.</p>
+              <div className="two-column-grid">
+              <div className="column">
+                <tr>
+                  <td>
+                    <label htmlFor='givenName'>First Name:</label>
+                  </td>
+                  </tr>
+                  <tr>
+                  <td>
+                    <input
+                      type='text'
+                      id='givenName'
+                      name='givenName'
+                      value={formValues?.givenName}
+                      onChange={handleChange}
+                    />
+                  </td>
+                  </tr>
+                  </div>
+                  <div className="column">
+                <tr>
+                  <td>
+                    <label htmlFor='lastName'>Last Name:</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      type='text'
+                      id='lastName'
+                      name='lastName'
+                      value={formValues?.lastName}
+                      onChange={handleChange}
+                    />
+                  </td>
+                </tr>
                 </div>
-              </form>
+                </div>
+              <button className='btn margin-top' type='submit'>Update</button>
+            </table>
+          </div>
+        </form>
 
-              <h3>Security Methods</h3>
-              <p className='p-description justified-text'>Secure your account by updating passwords and second factor authentication methods.</p>
-
+        <h3>Security Methods</h3>
+        <p className='p-description justified-text'>
+          Secure your account by updating passwords and second factor authentication methods.
+        </p>
         <div className="two-column-grid">
           <div className="column">
             <div className='info-box'>
@@ -262,59 +262,59 @@ const Profile = () => {
                   </tr>
                   <button className='btn-outline btn-margin-top' type='submit'>Change</button>
                 </table>
-                </div>
-                </form>
-                </div>
-                </div>
-
-                <div className="column">
-                <div className='info-box'>
-                <form onSubmit={handleSecondFactorSubmit}>
-                <div className="table-container">
-                  <table className="one-column-table">
-                    <h3>Second Factor Authentication</h3>
-                    <p className='p-description justified-text'>Secure your account by setting two factor authentication.</p>
-                    <tr>
-                      <td colSpan={2} className='tr-align-center'>
-                        <label>Select the Second Factor Authentication: </label>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan={2} className='tr-align-center'>
-                        <select id='mfa' name='mfa' onChange={handleSelect}>
-                          <option value='false'>None</option>
-                          <option value='email-otp-authenticator'>Email OTP</option>
-                          <option value='SMSOTP'>SMS OTP</option>
-                          <option value='totp'>TOTP</option>
-                        </select>
-                      </td>
-                    </tr>
-                    <label htmlFor='hint'>
-                      The selected second factor will be prompted for authentication in the login flow.
-                    </label>
-                    <br/>
-                    <button className='btn-margin-top btn-outline' type='submit'>Save</button>
-                  </table>
-                </div>
-                </form>
               </div>
-              <tr>
-                <td colSpan={2} className='tr-padding tr-align-center'>
-                  <div className='notification tr-align-center' id='successNotification'>
-                    <p className='p-description' id='notificationDescription'>Submission successful!</p>
-                  </div>
-                </td>
-              </tr>
+            </form>
+          </div>
+        </div>
+
+        <div className="column">
+          <div className='info-box'>
+            <form onSubmit={handleSecondFactorSubmit}>
+              <div className="table-container">
+                <table className="one-column-table">
+                  <h3>Second Factor Authentication</h3>
+                  <p className='p-description justified-text'>Secure your account by setting two factor authentication.</p>
+                  <tr>
+                    <td colSpan={2} className='tr-align-center'>
+                      <label>Select the Second Factor Authentication: </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colSpan={2} className='tr-align-center'>
+                      <select id='mfa' name='mfa' onChange={handleSelect}>
+                        <option value='false'>None</option>
+                        <option value='email-otp-authenticator'>Email OTP</option>
+                        <option value='SMSOTP'>SMS OTP</option>
+                        <option value='totp'>TOTP</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <label htmlFor='hint'>
+                    The selected second factor will be prompted for authentication in the login flow.
+                  </label>
+                  <br/>
+                  <button className='btn-margin-top btn-outline' type='submit'>Save</button>
+                </table>
+              </div>
+            </form>
+          </div>
+          <tr>
+            <td colSpan={2} className='tr-padding tr-align-center'>
+              <div className='notification tr-align-center' id='successNotification'>
+                <p className='p-description' id='notificationDescription'>Submission successful!</p>
+              </div>
+            </td>
+          </tr>
         </div>
       </div>
     </div>)
-
-    : (<div class="loader-container">
-    <div class="loader"></div>
-  </div>
-  )
-}
-  </>
+    : (
+    <div class="loader-container">
+      <div class="loader"></div>
+    </div>
+    )
+  }
+    </>
   );
 };
 

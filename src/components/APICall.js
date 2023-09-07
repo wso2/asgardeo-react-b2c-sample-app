@@ -39,7 +39,6 @@ const APICall = () => {
           {JSON.stringify(userInfo, null, 2)}
         </pre>
       </div>
-      
     </div>
   )
 }
