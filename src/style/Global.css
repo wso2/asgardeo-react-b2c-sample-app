@@ -1,0 +1,788 @@
+:root {
+  --primary: #FF7300;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Custom Styles */
+
+.App-header-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(0, 0, 0);
+  height: 100vh;
+}
+
+.App-header-length {
+  height: 40vh;
+}
+
+.App-section {
+  background-color: #fcfdfd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+}
+
+.App-section label {
+  font-size: small;
+}
+
+.App-section h3 {
+  font-weight: 450;
+}
+
+.App-header-section h4 {
+  font-weight: 250;
+}
+
+.image-icon {
+  height: 60%;
+  margin: 10px;
+}
+
+.card-section {
+  background: #F7F8FB;
+  height: 150px;
+  display: flow-root;
+}
+
+/* Apply general styling to the button container */
+.button-container {
+  display: flex;
+  justify-content: center; /* Centers the buttons horizontally */
+}
+
+.card-container {
+  align-items: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: left;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.App h1 {
+  font-family: Inter;
+  font-weight: 300;
+  font-size: xx-large;
+  margin: 5px;
+}
+
+.p-description {
+  font-size: medium;
+  color: rgb(0 0 0 / 60%);
+  text-align: justify;
+  justify-content: center;
+  margin: 5px;
+}
+
+.label-hint {
+  font-size: 9px;
+}
+
+/* Center-align the last line */
+.justified-text {
+  text-align: center;
+}
+
+.max-width {
+  width: 800px;
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: #a63030;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+  max-height: 100px;
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+  color: #a63030;
+}
+
+.user-profile-table {
+  margin-left: auto;
+  margin-right: auto;
+  overflow-y: scroll;
+}
+
+th, td {
+  padding-top: 5px;
+  padding-bottom: 7px;
+  padding-left: 30px;
+  padding-right: 40px;
+  text-align: left;
+}
+
+.navbar-section {
+  background: #F7F8FB;
+  justify-content: center;
+  place-items: center;
+}
+
+.navbar {
+  max-width: 100%;
+  display: flex;
+  background: #F7F8FB;
+  justify-content: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.navbar a {
+  padding: 5px;
+  text-decoration: none;
+  color: #000;
+  font-size: small;
+  text-align: center;
+}
+
+.right-panel {
+  width: 50%;
+  padding: 10px;
+  text-align: right;
+  margin-left: 10px;
+  float: left;
+  display: flex;
+    justify-content: right; /* Centers the columns horizontally */
+    align-items: center; 
+}
+
+.left-panel {
+  width: 15%;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+    justify-content: center; /* Centers the columns horizontally */
+    align-items: center; 
+}
+
+.center-panel {
+  width: 40%;
+  padding: 15px;
+  text-align: left;
+  display: flex;
+  justify-content: left; /* Centers the columns horizontally */
+  align-items: center; 
+}
+
+.center-panel a{
+  width: 70px;
+}
+
+* {
+  font-family: Inter;
+}
+
+body {
+  font-family: Inter;
+  overflow-y: scroll;
+}
+
+/* Float four columns side by side */
+.col {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .col {
+    display: block;
+    margin-bottom: 20px;
+    width: 50vh;
+  }
+
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .card {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  .two-column-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info-box {
+    width: 100vh;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  padding: 25px;
+  text-align: left;
+  background: #ffffff;
+  height: 180px;
+  display: grid;
+  border: 1px solid #ECECEC;
+  border-radius: 0.5rem;
+  margin: 20px;
+}
+
+.card a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.card-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.card h3{
+  font-size: medium;
+}
+
+.card p{
+  font-size: .9em;
+  color: rgb(0 0 0 / 60%);
+}
+
+.card:hover {
+  background-color: #f5f5f5; /* Change background color on hover */
+  border: 1px solid var(--primary);
+}
+
+h3 {
+  font-weight: 500;
+}
+
+.footer {
+  background: #F7F8FB;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  justify-content: center;
+  display: flex;
+  position: fixed;
+  margin-top: 10px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #000;
+  font-size: small;
+}
+
+.footer p {
+  font-size: small;
+}
+
+@media (max-width: 400px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
+
+.react-logo-image {
+  height: 100px;
+  padding-bottom: 35px;
+}
+
+.asgardeo-logo-image {
+  height: 36px;
+  padding-left: 10px;
+  margin: 0;
+}
+
+.asgardeo-logo-image-small {
+  height: 20px;
+  padding: 10px;
+}
+
+.link-logo-image {
+  height: 80px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+}
+
+.link-logo-image-small {
+  height: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 20px;
+  height: 20px;
+}
+
+.small-icon {
+  height: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 15px;
+  height: 15px;
+}
+
+.link-logo-image-small:hover {
+  border-color: var(--primary);
+}
+
+.github-logo-image-small {
+  height: 20px;
+  padding-right: 15px;
+}
+
+.btn {
+  border: 2px solid var(--primary);
+  background: var(--primary);
+  color: rgb(255, 255, 255);
+  padding: 10px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 500rem;
+  font-size: small;
+  width: 170px;
+  margin: 2px;
+}
+
+.margin-top {
+  margin-bottom: 35px;
+  margin-top: 35px;
+}
+
+.btn-outline {
+  border: 2px solid var(--primary);
+  background-color: #ffffff;
+  color: var(--primary);
+  padding: 10px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 500rem;
+  font-size: small;
+  width: 170px;
+  margin: 2px;
+}
+
+.btn-margin-top {
+  margin-top: 20px;
+}
+
+.notification {
+  display: none;
+  background-color: #f2f2f2;
+  color: #333;
+  padding: 10px;
+}
+
+.notification p {
+  margin: 0;
+}
+
+.notification.show {
+  display: block;
+}
+
+pre {
+  background-color: #F5F5F8;
+  padding: 20px;
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 1.4;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  width: 800px;
+  min-height: 100px;
+  text-align: left;
+  border-radius: 8px;
+}
+
+code {
+  font-family: Inter;
+  white-space: nowrap;
+}
+
+.tr-padding {
+  padding: 50px;
+}
+
+.tr-align-center {
+  text-align: center;
+}
+
+.info-box {
+  align-items: center;
+  padding: 5px;
+  border: 1px solid #cccccc4b;
+  border-radius: 8px;
+  min-width: 70vh;
+  min-height: 50vh;
+}
+
+.column {
+  flex: 1;
+  /* padding: 10px; */
+}
+
+.button {
+  display: inline-block;
+  padding: 7px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--primary);
+}
+
+.button:active {
+  background-color: var(--primary);
+}
+
+/* Styles for the input box */
+input[type=text], input[type=password] {
+  /* Set width and height */
+  width: 400px;
+  height: 25px;
+
+  /* Add some padding for better appearance */
+  padding: 5px;
+
+  /* Border styles */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+
+  /* Font styles */
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+
+  /* Text color and background color */
+  color: #333;
+  background-color: #fff;
+
+  /* Cursor style */
+  cursor: text;
+
+  /* Remove default browser appearance */
+  outline: none;
+}
+
+input[type=radio] {
+  margin: 10px;
+}
+
+.radio input[type="radio"]:checked + .radio::after {
+  accent-color: var(--primary); /* Change border color for selected radio button */
+  background-color: var(--primary); /* Change background color for selected radio button */
+}
+
+select {
+  width: 400px;
+  height: 35px;
+
+  /* Add some padding for better appearance */
+  padding: 5px;
+
+  /* Border styles */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Hover effect */
+input:hover {
+  border-color: var(--primary);
+}
+
+/* Focus effect */
+input:focus {
+  border-color: var(--primary);
+}
+
+/* Style the active class, and buttons on mouse-over */
+.active, .btn:hover {
+  border-bottom: 2px solid var(--primary);
+}
+
+.App-header-sub-section {
+  background-color: #ebedf1;
+  min-height: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(0, 0, 0);
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+/* Apply general styling to the table container */
+.table-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Horizontally center the table */
+  align-items: center; /* Vertically center the table */
+}
+
+/* Apply general styling to the table */
+table.one-column-table {
+  border-collapse: collapse; /* Merge cell borders */
+  width: 400px; /* Set the width of the table */
+}
+
+/* Apply styling to table cells (td) */
+table.one-column-table td {
+  padding: 5px; /* Add padding inside the cells */
+  text-align: left; /* Center the content inside the cells */
+}
+
+/* Apply styling to table cells (td) */
+table.one-column-table tr {
+  padding: 15px; /* Add padding inside the cells */
+  text-align: left; /* Center the content inside the cells */
+  font-family: Arial, sans-serif; /* Choose a font for the text */
+}
+
+/* Apply general styling to the container */
+.container {
+  display: flex;
+  justify-content: center; /* Centers the columns horizontally */
+  align-items: center; /* Centers the columns vertically */
+}
+
+.container-center {
+  justify-content: center; /* Centers the columns horizontally */
+  align-items: center; /* Centers the columns vertically */
+  flex-direction: column;
+  padding: 50px;
+}
+
+.logo-container {
+  display: flex;
+}
+
+/* Apply styling to the columns */
+.container-column {
+  align-items: center;
+  font-size: 18px;
+  display: flex;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+.container-column a {
+  text-decoration: none;
+  color: #000;
+  font-size: small;
+}
+
+.button-container {
+  display: grid;
+  margin-top: 60px;
+}
+
+.b {
+  font-weight: 10;
+}
+
+.avatar-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.arrow {
+  font-size: 8px;
+  transform: translateY(2px);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.avatar-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 0px 0px;
+}
+
+.dropdown-menu a {
+  color: #333;
+  text-decoration: none;
+  display: flex;
+  padding: 10px;
+  width: 70px;
+  align-content: left;
+  justify-content: left;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f5f5f5;
+}
+
+.circular-image {
+  border-radius: 50%;
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+.two-column-grid {
+  display: flex;
+  grid-template-columns: 1fr 1fr; /* Equal width columns */
+}
+
+.column {
+  padding: 5px;
+}
+
+.theme-image {
+  width: 500px;
+}
+
+.card-container-theme {
+  align-items: center;
+  font-size: 18px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.theme-card-height {
+  height: 300px;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust as needed */
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: var(--primary);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
