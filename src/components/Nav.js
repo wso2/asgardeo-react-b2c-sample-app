@@ -62,11 +62,11 @@ const Nav = () => {
     useEffect(() => {
       const currentUrl = window.location.href;
       const currentTabName = currentUrl.split("/")[3].replace("#", "");
+      const resourceTab = document.getElementById("resource");
+      const settingsTab = document.getElementById("setting");
+      const homeTab = document.getElementById("home");
+      const profileTab = document.getElementById("profile");
 
-      var resourceTab = document.getElementById("resource");
-      var settingsTab = document.getElementById("setting");
-      var homeTab = document.getElementById("home");
-      var profileTab = document.getElementById("profile");
       var currentTab = homeTab;
 
       if (currentTabName === "resource") {
