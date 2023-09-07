@@ -11,14 +11,14 @@ import { Settings } from './pages/Settings';
 
 function App() {
 
-    const { state } = useAuthContext();
+  const { state } = useAuthContext();
 
   return (
     <Router>
       <div className='App'>
         {
-            state?.isAuthenticated
-            && <Nav></Nav>
+          state?.isAuthenticated
+          && <Nav></Nav>
         }
         <Routes>
           <Route path='/' element={ <Home/> } />

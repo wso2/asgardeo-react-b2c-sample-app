@@ -29,7 +29,6 @@ const Profile = () => {
         // Log the error.
       }
     })();
-    
   }, []);
 
   // Set the form values.

@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "@wso2/asgardeo-react-b2c-sample-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

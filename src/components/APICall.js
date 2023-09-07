@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { getExternalApi} from '../api/external-api';
+import { getExternalApi } from '../api/external-api';
 import INFO_ICON from '../images/info.png';
 
 /**

@@ -1,8 +1,6 @@
 import {AsgardeoSPAClient} from '@asgardeo/auth-react';
 import endpointConfig from '../configs/endpoint-config';
 
-const externalApiEndpoint = `${endpointConfig.api.endpoints.externalApi}`;
-
 const auth = AsgardeoSPAClient.getInstance();
 
 export async function getExternalApi () {
@@ -13,7 +11,7 @@ export async function getExternalApi () {
       "Content-Type": "application/json"
     },
     method: "GET",
-    url: externalApiEndpoint
+    url: `${endpointConfig.api.endpoints.externalApi}`
   };
 
   return auth.httpRequest(requestConfig)
